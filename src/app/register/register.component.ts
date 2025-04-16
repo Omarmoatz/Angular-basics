@@ -8,7 +8,14 @@ import { Component, OnInit, SimpleChanges } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
+  email : string;
+  phone1 : number;
+  phone2 : number;
+
   constructor(){
+    this.email = "info@gmail.com"
+    this.phone1 = 1033594673
+    this.phone2 = 1011093980
     console.log("constructor >>>>>>>>>>>>>>>>");
 
   }
