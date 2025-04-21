@@ -1,4 +1,4 @@
-import { Component, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-register',
@@ -11,11 +11,14 @@ export class RegisterComponent implements OnInit {
   email : string;
   phone1 : number;
   phone2 : number;
+  @Input() address: string;
 
   constructor(){
     this.email = "info@gmail.com"
     this.phone1 = 1033594673
     this.phone2 = 1011093980
+    this.address = "Mansoura, dikernis"
+
     console.log("constructor >>>>>>>>>>>>>>>>");
 
   }

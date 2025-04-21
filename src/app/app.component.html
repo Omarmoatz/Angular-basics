@@ -227,7 +227,14 @@
       </svg>
       <h1>Hello, {{ title }}</h1>
       <p>Congratulations! Your app is running. 🎉</p>
+
+      <h4>app description</h4>
+      <p>{{description}}</p>
+
+      <h4>current date and time</h4>
+      <p>{{ getNowDateTime() | date :"dd/MM/yyyy HH:MM"}}</p>
     </div>
+
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
       <div class="pill-group">
@@ -328,7 +335,7 @@
   
 </main>
 
-<app-register></app-register>
+<app-register address={{newAddress}}></app-register>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
