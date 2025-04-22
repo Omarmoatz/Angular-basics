@@ -329,13 +329,19 @@
       </div>
     </div>
   </div>
-   
-
+  
 
   
+  <button class="btn btn-primary" (click)="increment()">
+    add +
+  </button>
+  
+  <button class="btn btn-warning" (click)="decrement()">
+    mines -
+  </button>
 </main>
 
-<app-register address={{newAddress}}></app-register>
+<app-register address={{newAddress}} counter={{counter}}></app-register>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->

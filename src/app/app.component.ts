@@ -14,13 +14,24 @@ export class AppComponent {
   title = '                my-angular-app                     ';
   description = 'This is a simple angular app';
   newAddress: string;
+  counter: number;
 
   constructor() {
     this.newAddress = "Cairo, Nasr city ....";
+    this.counter = 0;
   }
 
-  getNowDateTime(): Date{
+  getNowDateTime(): Date {
     return new Date();
   }
+
+  increment(): void {
+    this.counter++;
+  }
+
+  decrement(): void {
+    this.counter--;
+  }
+
 
 }

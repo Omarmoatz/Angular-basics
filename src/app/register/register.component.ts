@@ -9,12 +9,13 @@ import { FormsModule } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
 
+  user:any;
   email : string;
   phone1 : number;
   phone2 : number;
   @Input() address: string;
+  @Input() counter: number;
   
-  user:any;
 
 
   constructor(){
@@ -22,14 +23,13 @@ export class RegisterComponent implements OnInit {
     this.phone1 = 1033594673
     this.phone2 = 1011093980
     this.address = "Mansoura, dikernis"
+    this.counter = 0
 
     this.user = {
       name: "",
       age: "",
       address: ""
     }
-
-    console.log("constructor >>>>>>>>>>>>>>>>");
 
   }
 
