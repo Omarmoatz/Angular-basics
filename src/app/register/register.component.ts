@@ -1,8 +1,9 @@
 import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
@@ -12,6 +13,9 @@ export class RegisterComponent implements OnInit {
   phone1 : number;
   phone2 : number;
   @Input() address: string;
+  
+  user:any;
+
 
   constructor(){
     this.email = "info@gmail.com"
@@ -19,8 +23,19 @@ export class RegisterComponent implements OnInit {
     this.phone2 = 1011093980
     this.address = "Mansoura, dikernis"
 
+    this.user = {
+      name: "",
+      age: "",
+      address: ""
+    }
+
     console.log("constructor >>>>>>>>>>>>>>>>");
 
+  }
+
+  register(): void{
+    console.log("user" + JSON.stringify(this.user));
+    
   }
 
   ngOnInit(): void {
