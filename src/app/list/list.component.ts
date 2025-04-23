@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { DetailComponent } from '../detail/detail.component';
+import { CreateComponent } from '../create/create.component';
 
 @Component({
   selector: 'app-list',
-  imports: [CommonModule, DetailComponent],
+  imports: [CommonModule, DetailComponent, CreateComponent],
   templateUrl: './list.component.html',
   styleUrl: './list.component.css'
 })
@@ -24,6 +25,10 @@ export class ListComponent {
   showDetails(data:string):void{
     this.details = data;
     this.show = true;
+  }
+
+  addItem(item:string){
+    this.items.push(item)
   }
 
 

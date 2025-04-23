@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-create',
@@ -7,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './create.component.css'
 })
 export class CreateComponent {
+
+  @Output() eventEmitter = new EventEmitter<string>();
+
+  addEvent(name:string, age:string):void{
+    this.eventEmitter.emit(name);
+  }
+
 
 }

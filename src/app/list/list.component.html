@@ -26,5 +26,7 @@
         </div>
 
         <app-detail [userDetails]="details" *ngIf="show"></app-detail>
+
+        <app-create (eventEmitter)="addItem($event)"></app-create>
     </div>
 </div>
