@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ListComponent } from '../list/list.component';
 
 @Component({
   selector: 'app-register',
-  imports: [FormsModule],
+  imports: [FormsModule,ListComponent],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })

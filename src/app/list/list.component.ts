@@ -1,11 +1,30 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-list',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './list.component.html',
   styleUrl: './list.component.css'
 })
 export class ListComponent {
+  items:any;
+  details:string = "";
+  show:boolean = false;
+
+  constructor(){
+    this.items = [
+      {"name":"omar", "age":20},
+      {"name":"ahmad", "age":30},
+    ]
+
+  }
+
+  showDetails(data:string):void{
+    this.details = data;
+    this.show = true;
+  }
+
+
 
 }

@@ -356,14 +356,28 @@
   </div>
 </div>
 
-<app-register address={{newAddress}} [count]="counter" (eventEmitter)="addItem($event)"></app-register>
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- REGISTER COMPONENT -->
+<section class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-10">
+      <app-register
+        [address]="newAddress"
+        [count]="counter"
+        (eventEmitter)="addItem($event)">
+      </app-register>
+    </div>
+  </div>
+</section>
+
+<!-- LIST COMPONENT -->
+<!-- <section class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-10">
+      <app-list></app-list>
+    </div>
+  </div>
+</section> -->
+
 
 
 <router-outlet />
