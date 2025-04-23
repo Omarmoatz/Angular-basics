@@ -15,10 +15,19 @@ export class AppComponent {
   description = 'This is a simple angular app';
   newAddress: string;
   counter: number;
+  items = ["item1", "item2", "item3"];
 
   constructor() {
     this.newAddress = "Cairo, Nasr city ....";
     this.counter = 0;
+  }
+
+  addItem(value: string): void {
+    if (this.items.includes(value)) {
+      alert("Item already exists");
+      return;
+    }    
+    this.items.push(value);
   }
 
   getNowDateTime(): Date {

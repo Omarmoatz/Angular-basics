@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -14,7 +14,9 @@ export class RegisterComponent implements OnInit {
   phone1 : number;
   phone2 : number;
   @Input() address: string;
-  @Input() counter: number;
+  @Input() count: number;
+
+  @Output() eventEmitter = new EventEmitter<string>();
   
 
 
@@ -23,7 +25,7 @@ export class RegisterComponent implements OnInit {
     this.phone1 = 1033594673
     this.phone2 = 1011093980
     this.address = "Mansoura, dikernis"
-    this.counter = 0
+    this.count = 0
 
     this.user = {
       name: "",
@@ -31,6 +33,10 @@ export class RegisterComponent implements OnInit {
       address: ""
     }
 
+  }
+
+  addNewItem(value: string): void {
+    this.eventEmitter.emit(value);
   }
 
   register(): void{

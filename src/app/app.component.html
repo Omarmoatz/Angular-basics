@@ -330,18 +330,33 @@
     </div>
   </div>
   
-
-  
-  <button class="btn btn-primary" (click)="increment()">
-    add +
-  </button>
-  
-  <button class="btn btn-warning" (click)="decrement()">
-    mines -
-  </button>
 </main>
 
-<app-register address={{newAddress}} counter={{counter}}></app-register>
+<div class="container">
+  <div class="row">
+    <div class="col-3"></div>
+
+    <div class="col-6">
+      <ol>
+        <li *ngFor="let item of items" #newItem>{{item}}</li>
+      </ol>
+
+
+      <button class="btn btn-primary" (click)="increment()">
+        add +
+      </button>
+      
+      <button class="btn btn-warning" (click)="decrement()">
+        mines -
+      </button>
+    
+    </div>
+
+    <div class="col-3"></div>
+  </div>
+</div>
+
+<app-register address={{newAddress}} [count]="counter" (eventEmitter)="addItem($event)"></app-register>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
