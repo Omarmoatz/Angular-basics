@@ -7,7 +7,8 @@ import { Component, Input } from '@angular/core';
   styleUrl: './detail.component.css'
 })
 export class DetailComponent {
-  @Input() userDetails:any;
+  @Input() userName:any;
+  @Input() userAge:any;
 
   
 }

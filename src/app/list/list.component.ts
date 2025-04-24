@@ -11,7 +11,8 @@ import { CreateComponent } from '../create/create.component';
 })
 export class ListComponent {
   items:any;
-  details:any;
+  userDetailName:any;
+  userDetailAge:any;
   show:boolean = false;
 
   constructor(){
@@ -22,8 +23,9 @@ export class ListComponent {
 
   }
 
-  showDetails(data:string):void{
-    this.details = data;
+  showDetails(name:string, age:number):void{
+    this.userDetailName = name;
+    this.userDetailAge = age;
     this.show = true;
   }
 

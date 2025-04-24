@@ -16,7 +16,7 @@
                     <td>{{item.age}}</td>
                     <td>
                         <button class="btn btn-outline-warning"
-                                (click)="showDetails(item.name)">
+                                (click)="showDetails(item.name, item.age)">
                              show details 
                         </button>
                     </td>
@@ -25,7 +25,7 @@
               </table>
         </div>
 
-        <app-detail [userDetails]="details" *ngIf="show"></app-detail>
+        <app-detail [userName]="userDetailName" [userAge]="userDetailAge" *ngIf="show"></app-detail>
 
         <app-create (eventEmitter)="addItem($event)"></app-create>
     </div>
