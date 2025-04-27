@@ -9,13 +9,15 @@ import { FormsModule } from '@angular/forms';
 })
 export class CreateComponent {
 
-  name :any;
-  age: any;
   items = {"name":"", "age":""}; 
   @Output() eventEmitter = new EventEmitter<any>();
 
   addEvent():void{
-    this.items = {"name":this.items.name, "age":this.items.age} 
+    this.items = {"name":this.items.name, "age":this.items.age}
+    if(this.items.name == "" || this.items.age == ""){
+      alert("Please fill all fields");
+      return;
+    } 
     this.eventEmitter.emit(this.items);
     console.log(this.items);
     this.resetForm();
