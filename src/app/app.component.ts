@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
 import { CommonModule } from '@angular/common';
 import { TrimPipe } from './trim.pipe';
+import { RegisterUserComponent } from './register-user/register-user.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RegisterComponent, CommonModule, TrimPipe],
+  imports: [RouterOutlet, RegisterComponent, CommonModule, RegisterUserComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
