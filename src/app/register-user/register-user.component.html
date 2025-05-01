@@ -38,7 +38,10 @@
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                            <input [(ngModel)]="user.phone" type="text" class="form-control" name="Phone" id="Phone"  placeholder="Enter your Phone" required/>
+                            <input #phone="ngModel" appPhoneValidator [(ngModel)]="user.phone" type="text" class="form-control" name="Phone" id="Phone"  placeholder="Enter your Phone" required/>
+                        </div>
+                        <div *ngIf="phone.touched && phone.invalid" class="text-danger my-1">
+                            <p *ngIf="phone.errors?.['InvalidPhoneNum']">phone number is in wrong pattern</p>
                         </div>
                     </div>
                 </div>
